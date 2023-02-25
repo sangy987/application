@@ -1,0 +1,100 @@
+<div class="tabs">
+	<div class="d-flex flex-row " style="height: 100%!important;">
+		<ul class="nav nav-tabs nav-tabs--vertical nav-tabs--left" role="navigation">
+			<li class="nav-item">
+				<a href="#tab1" class="nav-link active" data-toggle="tab" role="tab" aria-controls="lorem">Lorem</a>
+			</li>
+			<li class="nav-item">
+				<a href="#ipsum" class="nav-link active" data-toggle="tab" role="tab" aria-controls="ipsum">Ipsum</a>
+			</li>
+			<li class="nav-item">
+				<a href="#dolor" class="nav-link active" data-toggle="tab" role="tab" aria-controls="dolor">Dolor</a>
+			</li>
+			<li class="nav-item">
+				<a href="#sit-amet" class="nav-link active" data-toggle="tab" role="tab" aria-controls="sit-amet">Sit
+					Amet</a>
+			</li>
+		</ul>
+		<div class="tab-content">
+			<div class="tab-pane fade show active" id="tab1" role="tabpanel">
+				<h1>Lorem</h1>
+				<ng-template #content let-c="close" let-d="dismiss">
+					<div class="modal-header">
+						<h4 class="modal-title" id="modal-basic-title">Hi there!</h4>
+						<button type="button" class="btn-close" aria-label="Close" (click)="d('Cross click')"></button>
+					</div>
+					<div class="modal-body">
+						<input type="text" pInputText [(ngModel)]="value1"> 
+<span class="p-ml-2">{{value1}}</span>
+<textarea pInputTextarea></textarea>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-outline-dark" (click)="c('Save click')">Save</button>
+					</div>
+				</ng-template>
+
+				<button class="btn btn-lg color-green" (click)="open(content)">+ Lauch modal</button>
+				<hr/>
+				<p-card [style]="{
+				border: '3px solid #F2F2F2', 
+				borderRadius: '0.5rem', 
+				width: '75rem'
+			}" header="Simple Card">
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore sed consequuntur error
+						repudiandae numquam deserunt
+						quisquam repellat libero asperiores earum nam nobis, culpa ratione quam perferendis esse,
+						cupiditate neque quas!</p>
+				</p-card>
+				<p-card [style]="{
+				border: '3px solid #F2F2F2', 
+				borderRadius: '0.5rem', 
+				width: '75rem'
+			}" header="Simple Card">
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore sed consequuntur error
+						repudiandae numquam deserunt
+						quisquam repellat libero asperiores earum nam nobis, culpa ratione quam perferendis esse,
+						cupiditate neque quas!</p>
+				</p-card>
+				<p-card [style]="{
+				border: '3px solid #F2F2F2', 
+				borderRadius: '0.5rem', 
+				width: '75rem'
+			}" header="Simple Card">
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore sed consequuntur error
+						repudiandae numquam deserunt
+						quisquam repellat libero asperiores earum nam nobis, culpa ratione quam perferendis esse,
+						cupiditate neque quas!</p>
+				</p-card>
+			</div>
+			<div class="tab-pane fade" id="ipsum" role="tabpanel">
+				kjhhhkkj
+
+			</div>
+			<div class="tab-pane fade" id="dolor" role="tabpanel">
+				<h1>Dolor</h1>
+
+				<p>Ut eget lectus tristique, tempus purus sit amet, porta augue. Mauris lobortis sem nec augue ultricies
+					blandit. Nullam sed sem venenatis, pretium urna eget, scelerisque dolor. Morbi nec volutpat leo,
+					quis faucibus tortor. Aenean vel rutrum mauris. Pellentesque lectus massa, tincidunt quis leo non,
+					sodales sagittis nulla. Proin interdum est at nulla laoreet, pulvinar pretium nisl rutrum. In vel
+					elit a risus rhoncus accumsan vulputate non sapien. Sed et rhoncus velit. Nunc commodo augue
+					fermentum, hendrerit neque at, ullamcorper arcu. Nulla tincidunt orci a lectus efficitur elementum.
+					Donec molestie urna vestibulum augue placerat faucibus. In vitae orci vel mauris cursus viverra ac
+					sit amet nisl. Phasellus odio tortor, ullamcorper eget ullamcorper eget, molestie eget justo.
+					Integer elementum purus eget arcu fermentum tincidunt. Nullam erat tellus, dictum sit amet nisi eu,
+					rutrum fermentum odio.</p>
+			</div>
+			<div class="tab-pane fade" id="sit-amet" role="tabpanel">
+				<h1>Sit Amet</h1>
+
+				<p>Aliquam hendrerit nunc vitae nisi efficitur, eu porta sem aliquam. Aenean tincidunt mi sed mi sodales
+					bibendum. Proin dolor ipsum, mollis venenatis velit eu, iaculis laoreet mi. Mauris eget egestas
+					felis, sit amet finibus nunc. Aliquam non dui sit amet erat auctor mollis ac eget ante. Quisque at
+					quam augue. Nulla dignissim, augue nec cursus consequat, mi nulla efficitur augue, vel fringilla
+					turpis quam eu nunc. Quisque rutrum vehicula lacus sodales molestie. Mauris vel felis sit amet erat
+					maximus cursus ut a velit. In hac habitasse platea dictumst. Vestibulum vel neque sit amet nisl
+					finibus fermentum.</p>
+			</div>
+		</div>
+	</div>
+</div>

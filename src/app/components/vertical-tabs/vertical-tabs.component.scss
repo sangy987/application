@@ -1,0 +1,72 @@
+$padding-base: 15px;
+$color-body: #fff;
+$color-border: #ddd;
+$color-link: #0275d8;
+$border-radius: .25rem;
+
+.tabs{
+  position: fixed;
+  top: 7.55rem;
+  left: 3.83rem;
+  width: 100%;
+  height: 90%;
+  background-color: white;
+  
+
+
+}
+.rectangle {
+	height: 50px;
+	width: 100px;
+	background-color: #00826B;
+  }
+.nav-tabs {
+	&--vertical {
+		border-bottom: none;
+		border-right: 1px solid $color-border;
+		display: flex;
+		flex-flow: column nowrap;
+	}
+	
+	&--left {
+    width: 115rem;
+    background-color: #F2F2F2;
+		
+		.nav-item + .nav-item {
+			margin-top: .25rem;
+		}
+		
+		.nav-link {
+			transition: border-color .125s ease-in;
+			white-space: nowrap;
+			
+			&:hover {
+				background-color: lighten($color-border, 10%);
+				border-color: transparent;
+			}
+		}
+		
+		.nav-link.active {
+			border-bottom-color: $color-border;
+			border-right-color: $color-body;
+			border-bottom-left-radius: $border-radius;
+			border-top-right-radius: $border-radius;
+			margin-right: 10px;
+      margin-left: 10px;
+			margin-top: 10px;
+			margin-bottom: 10px;
+      height: 5rem;
+
+			
+			&:hover {
+				background-color: $color-body;
+				border-color: $color-link $color-body $color-link $color-link;
+			}
+		}
+	}
+}
+
+.color-green{
+	background-color: #00826B;
+	color: white;
+}

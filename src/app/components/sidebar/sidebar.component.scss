@@ -1,0 +1,41 @@
+/* sidebar.component.css */
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 4%;
+    height: 100%;
+    background-color: #00826B;
+  }
+  
+  .logo {
+    margin-bottom: 20px;
+    margin-left: 6px;
+  }
+  
+  .menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .menu li {
+    margin-bottom: 10px;
+  }
+  
+  .menu li a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 10px;
+  }
+  
+  .menu li a:hover {
+    background-color: #ffffff22;
+  }
+  
+  .menu li a fa-icon {
+    margin-right: 10px;
+  }
+  
