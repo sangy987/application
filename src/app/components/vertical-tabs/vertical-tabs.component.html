@@ -2,39 +2,52 @@
 	<div class="d-flex flex-row " style="height: 100%!important;">
 		<ul class="nav nav-tabs nav-tabs--vertical nav-tabs--left" role="navigation">
 			<li class="nav-item">
-				<a href="#tab1" class="nav-link active" data-toggle="tab" role="tab" aria-controls="lorem">Lorem</a>
+				<a href="#tab1" class="nav-link active" data-toggle="tab" role="tab" aria-controls="tab1">Lorem</a>
 			</li>
 			<li class="nav-item">
-				<a href="#ipsum" class="nav-link active" data-toggle="tab" role="tab" aria-controls="ipsum">Ipsum</a>
+				<a href="#tab2" class="nav-link inactive" data-toggle="tab" role="tab" aria-controls="tab2">Ipsum</a>
 			</li>
 			<li class="nav-item">
-				<a href="#dolor" class="nav-link active" data-toggle="tab" role="tab" aria-controls="dolor">Dolor</a>
+				<a href="#tab3" class="nav-link inactive" data-toggle="tab" role="tab" aria-controls="tab3">Dolor</a>
 			</li>
 			<li class="nav-item">
-				<a href="#sit-amet" class="nav-link active" data-toggle="tab" role="tab" aria-controls="sit-amet">Sit
+				<a href="#tab4" class="nav-link inactive" data-toggle="tab" role="tab" aria-controls="tab4">Sit
 					Amet</a>
 			</li>
 		</ul>
-		<div class="tab-content">
+		<div class="tab-content px-4">
 			<div class="tab-pane fade show active" id="tab1" role="tabpanel">
 				<h1>Lorem</h1>
-				<ng-template #content let-c="close" let-d="dismiss">
+				<ng-template #content let-c="close" let-d="dismiss" class="modal-xl">
 					<div class="modal-header">
 						<h4 class="modal-title" id="modal-basic-title">Hi there!</h4>
 						<button type="button" class="btn-close" aria-label="Close" (click)="d('Cross click')"></button>
 					</div>
-					<div class="modal-body">
-						<input type="text" pInputText [(ngModel)]="value1"> 
-<span class="p-ml-2">{{value1}}</span>
-<textarea pInputTextarea></textarea>
+					<div class="modal-body px-5">
+						<div class="px-4 py-4">
+							<input type="text" pInputText [(ngModel)]="value">
+						</div>
+						<div class="px-4 py-4">
+							<input type="text" pInputText [(ngModel)]="value2">
+						</div>
+						<div class="px-4 py-4">
+							<input type="text" pInputText [(ngModel)]="value3">
+						</div>
+						<div class="px-4 py-4">
+							<div class="textarea-wrapper">
+								<textarea pInputTextArea [(ngModel)]="value1" (ngModelChange)="valueChange(value1)"
+									maxlength="1024"></textarea>
+								<span class="remaning">{{remainingText}}</span>
+							</div>
+						</div>
 					</div>
-					<div class="modal-footer">
-						<button type="button" class="btn btn-outline-dark" (click)="c('Save click')">Save</button>
+					<div class="modal-footer justify-content-center">
+						<button type="button" class="btn  rectangle" (click)="c('Save click')">Save</button>
 					</div>
 				</ng-template>
 
 				<button class="btn btn-lg color-green" (click)="open(content)">+ Lauch modal</button>
-				<hr/>
+				<hr />
 				<p-card [style]="{
 				border: '3px solid #F2F2F2', 
 				borderRadius: '0.5rem', 
@@ -66,11 +79,11 @@
 						cupiditate neque quas!</p>
 				</p-card>
 			</div>
-			<div class="tab-pane fade" id="ipsum" role="tabpanel">
+			<div class="tab-pane fade" id="tab2" role="tabpanel">
 				kjhhhkkj
 
 			</div>
-			<div class="tab-pane fade" id="dolor" role="tabpanel">
+			<div class="tab-pane fade" id="tab3" role="tabpanel">
 				<h1>Dolor</h1>
 
 				<p>Ut eget lectus tristique, tempus purus sit amet, porta augue. Mauris lobortis sem nec augue ultricies
@@ -84,7 +97,7 @@
 					Integer elementum purus eget arcu fermentum tincidunt. Nullam erat tellus, dictum sit amet nisi eu,
 					rutrum fermentum odio.</p>
 			</div>
-			<div class="tab-pane fade" id="sit-amet" role="tabpanel">
+			<div class="tab-pane fade" id="tab4" role="tabpanel">
 				<h1>Sit Amet</h1>
 
 				<p>Aliquam hendrerit nunc vitae nisi efficitur, eu porta sem aliquam. Aenean tincidunt mi sed mi sodales
