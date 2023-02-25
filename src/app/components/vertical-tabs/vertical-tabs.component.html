@@ -18,66 +18,57 @@
 		<div class="tab-content px-4">
 			<div class="tab-pane fade show active" id="tab1" role="tabpanel">
 				<h1>Lorem</h1>
-				<ng-template #content let-c="close" let-d="dismiss" class="modal-xl">
-					<div class="modal-header">
-						<h4 class="modal-title" id="modal-basic-title">Hi there!</h4>
-						<button type="button" class="btn-close" aria-label="Close" (click)="d('Cross click')"></button>
-					</div>
-					<div class="modal-body px-5">
-						<div class="px-4 py-4">
-							<input type="text" pInputText [(ngModel)]="value">
-						</div>
-						<div class="px-4 py-4">
-							<input type="text" pInputText [(ngModel)]="value2">
-						</div>
-						<div class="px-4 py-4">
-							<input type="text" pInputText [(ngModel)]="value3">
-						</div>
-						<div class="px-4 py-4">
-							<div class="textarea-wrapper">
-								<textarea pInputTextArea [(ngModel)]="value1" (ngModelChange)="valueChange(value1)"
-									maxlength="1024"></textarea>
-								<span class="remaning">{{remainingText}}</span>
-							</div>
-						</div>
-					</div>
-					<div class="modal-footer justify-content-center">
-						<button type="button" class="btn  rectangle" (click)="c('Save click')">Save</button>
-					</div>
-				</ng-template>
 
 				<button class="btn btn-lg color-green" (click)="open(content)">+ Lauch modal</button>
 				<hr />
-				<p-card [style]="{
+
+				<p-panel style="cursor: pointer;" (click)="open(contentCard)" [style]="{
+	border: '3px solid #F2F2F2', 
+	borderRadius: '0.5rem', 
+	width: '75rem',height:'7rem'}">
+					<ng-template pTemplate="header">
+						Header content here
+					</ng-template>
+					Body Content
+					<ng-template pTemplate="footer">
+						Footer content here
+					</ng-template>
+				</p-panel>
+
+				<p-panel class="mx-2 my-3" (click)="open(contentCard)" [style]="{
+	border: '3px solid #F2F2F2', 
+	borderRadius: '0.5rem', 
+	width: '75rem',height:'7rem'}">
+					<ng-template pTemplate="header">
+						Header content here
+					</ng-template>
+					Body Content
+					<ng-template pTemplate="footer">
+						Footer content here
+					</ng-template>
+				</p-panel><p-panel class="mx-2 my-3" (click)="open(contentCard)" [style]="{
+	border: '3px solid #F2F2F2', 
+	borderRadius: '0.5rem', 
+	width: '75rem',height:'7rem'}">
+					<ng-template pTemplate="header">
+						Header content here
+					</ng-template>
+					Body Content
+					<ng-template pTemplate="footer">
+						Footer content here
+					</ng-template>
+				</p-panel>
+				<p-card class="mx-2 my-3" (click)="open(contentCard)" [style]="{
 				border: '3px solid #F2F2F2', 
 				borderRadius: '0.5rem', 
-				width: '75rem'
+				width: '75rem',height:'7rem'
 			}" header="Simple Card">
 					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore sed consequuntur error
 						repudiandae numquam deserunt
 						quisquam repellat libero asperiores earum nam nobis, culpa ratione quam perferendis esse,
 						cupiditate neque quas!</p>
 				</p-card>
-				<p-card [style]="{
-				border: '3px solid #F2F2F2', 
-				borderRadius: '0.5rem', 
-				width: '75rem'
-			}" header="Simple Card">
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore sed consequuntur error
-						repudiandae numquam deserunt
-						quisquam repellat libero asperiores earum nam nobis, culpa ratione quam perferendis esse,
-						cupiditate neque quas!</p>
-				</p-card>
-				<p-card [style]="{
-				border: '3px solid #F2F2F2', 
-				borderRadius: '0.5rem', 
-				width: '75rem'
-			}" header="Simple Card">
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore sed consequuntur error
-						repudiandae numquam deserunt
-						quisquam repellat libero asperiores earum nam nobis, culpa ratione quam perferendis esse,
-						cupiditate neque quas!</p>
-				</p-card>
+
 			</div>
 			<div class="tab-pane fade" id="tab2" role="tabpanel">
 				kjhhhkkj
@@ -111,3 +102,43 @@
 		</div>
 	</div>
 </div>
+
+<ng-template #content let-c="close" let-d="dismiss" class="modal-xl">
+	<div class="modal-header">
+		<h4 class="modal-title" id="modal-basic-title">Hi there!</h4>
+		<div class="border ms-5" (click)="d('Cross click')"> Close </div>
+	</div>
+	<div class="modal-body px-5">
+		<div class="px-4 py-4">
+			<input type="text" pInputText [(ngModel)]="value">
+		</div>
+		<div class="px-4 py-4">
+			<input type="text" pInputText [(ngModel)]="value2">
+		</div>
+		<div class="px-4 py-4">
+			<input type="text" pInputText [(ngModel)]="value3">
+		</div>
+		<div class="px-4 py-4">
+			<div class="textarea-wrapper">
+				<textarea pInputTextArea [(ngModel)]="value1" (ngModelChange)="valueChange(value1)"
+					maxlength="1024"></textarea>
+				<span class="remaning">{{remainingText}}</span>
+			</div>
+		</div>
+	</div>
+	<div class="modal-footer justify-content-center">
+		<button type="button" class="btn  rectangle" (click)="c('Save click')">Save</button>
+	</div>
+</ng-template>
+<ng-template #contentCard let-c="close" let-d="dismiss" class="modal-xl">
+	<div class="modal-header">
+		<h4 class="modal-title" id="modal-basic-title">He there!</h4>
+		<button type="button" class="btn-close" aria-label="Close" (click)="d('Cross click')"></button>
+	</div>
+	<div class="modal-body px-5">
+
+	</div>
+	<div class="modal-footer justify-content-center">
+		<button type="button" class="btn  rectangle" (click)="c('Save click')">Save</button>
+	</div>
+</ng-template>
